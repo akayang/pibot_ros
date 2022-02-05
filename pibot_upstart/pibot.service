@@ -1,0 +1,11 @@
+[Unit]
+Description=this is pibot service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/pibot_start
+ExecStop=/usr/bin/pibot_stop
+ExecRestart=/usr/bin/pibot_restart
+
+[Install]
+WantedBy=multi-user.target

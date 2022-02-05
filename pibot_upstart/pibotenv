@@ -1,0 +1,14 @@
+#source ros
+source /opt/ros/kinetic/setup.bash
+
+LOCAL_IP=192.168.12.1
+export ROS_IP=$LOCAL_IP
+export ROS_HOSTNAME=$LOCAL_IP
+export PIBOT_MODEL=hades
+export PIBOT_LIDAR=rplidar
+export PIBOT_BOARD=stm32f4
+export ROS_MASTER_URI=http://$LOCAL_IP:11311
+
+#source pibot
+source /home/pibot/pibot_ros/ros_ws/devel/setup.bash
+
