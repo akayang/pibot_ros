@@ -29,7 +29,7 @@
         <param name="vo_used" value="false"/>
         <param name="debug" value="false"/>
         <remap from="odom" to="wheel_odom" />
-        <remap from="imu_data" to="Imu_data" />
+        <remap from="imu_data" to="imu/data" />
     </node>
 
     <node pkg="pibot_bringup" type="odom_ekf.py" name="odom_ekf" output="screen">

@@ -1,20 +1,14 @@
-//
-// Created by admin@atom-robotics
-// Modified by niuyunzhu@atom-robotics on 2019/10/22.
-//
+#ifndef ATOM_MACRO_H
+#define ATOM_MACRO_H
 
-#ifndef SABER_MACRO_H
-#define SABER_MACRO_H
 
-/* - MACRO definition start here -*/
-#define COMPORT_COMMUNICATION
-#define DMP_OUTPUT
-#define THREADCOUNT 1
-#define LINEAR_ACC
-#define DEG_RAD     0.01745329252
-#define ACCG_NMS   9.7803185
-#define PACK_LENGTH 79
-
+/*
+ ------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------
+ - MACRO definition start here
+ ------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------
+ */
 /*
  ************************************************************************
  * Definition for Protocol
@@ -236,7 +230,7 @@ typedef struct
     u8 reserve1;
     u16 packetID;
 
-}ConfigSingleDataPacket;
+}ConfigSingleDataPacket_HandleType;
 
 #endif
 

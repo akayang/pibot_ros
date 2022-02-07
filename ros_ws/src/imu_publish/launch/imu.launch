@@ -1,0 +1,8 @@
+
+<launch>
+
+  <node pkg="imu_publish" type="imu" name="imu_publisher">
+    <!-- <remap from="/imu/data" to="/todo"/> -->
+  </node>
+ 
+</launch>
