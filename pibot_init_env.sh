@@ -57,8 +57,8 @@ echo "${content}" > ~/.pibotrc
 #    exit
 #fi
 
-LOCAL_IP=`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | awk -F"/" '{print $1}'`
-echo "LOCAL_IP=\`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print \$2}' | awk -F"/" '{print \$1}'\`" >> ~/.pibotrc
+LOCAL_IP=`ip addr | grep 'dynamic' -A0 | tail -n1 | awk '{print $2}' | awk -F"/" '{print $1}'`
+echo "LOCAL_IP=\`ip addr | grep 'dynamic' -A0 | tail -n1 | awk '{print \$2}' | awk -F"/" '{print \$1}'\`" >> ~/.pibotrc
 
 if [ ! ${LOCAL_IP} ]; then
     echo -e "\033[1;31m please check network\033[0m"
