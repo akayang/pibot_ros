@@ -58,13 +58,13 @@ public:
     return &pn;
   }
 private:
-    constexpr static float ROBOT_RADIUS = 0.44;     //  m
-    constexpr static float WHEEL_RADIUS = 0.15 ;    //  m
-    constexpr static float REDUCE_RATIO = 40;
-    constexpr static float PI = 3.1415926;
+    static const float ROBOT_RADIUS = 0.44;     //  m
+    static const float WHEEL_RADIUS = 0.15 ;    //  m
+    static const float REDUCE_RATIO = 40;
+    static const float PI = 3.1415926;
 
-    constexpr static int left_motor_NodeID = 0x601;
-    constexpr static int right_motor_NodeID = 0x602;
+    static const int left_motor_NodeID = 0x601;
+    static const int right_motor_NodeID = 0x602;
 
     int can_device;
 
