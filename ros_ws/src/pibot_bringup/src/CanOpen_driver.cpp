@@ -45,7 +45,7 @@ int CanOpenDriver::init_can_device()
     ioctl(can_device, SIOCGIFINDEX, &ifr);
     addr.can_family  = AF_CAN;
     addr.can_ifindex = ifr.ifr_ifindex;
-    printf("%can_device at index %d\n", ifname, ifr.ifr_ifindex);
+    printf("%s can_device at index %d\n", ifname, ifr.ifr_ifindex);
     if(bind(can_device, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
         perror("Error in socket bind");
         return -2;

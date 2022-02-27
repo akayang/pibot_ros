@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="xbot_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00110801053893657 0.000440618188511099 0.486251704223636"
+        rpy="0 0 0" />
+      <mass
+        value="10.9839484523713" />
+      <inertia
+        ixx="0.483620233211735"
+        ixy="-3.30266996092628E-05"
+        ixz="-0.00414985851721053"
+        iyy="0.352810464020779"
+        iyz="3.02034438647069E-05"
+        izz="0.722643829522434" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pibot_description/meshes/xbot/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pibot_description/meshes/xbot/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="laser_link">
+    <inertial>
+      <origin
+        xyz="-0.001753 9.7044E-08 0.018367"
+        rpy="0 0 0" />
+      <mass
+        value="0.17934" />
+      <inertia
+        ixx="8.4514E-05"
+        ixy="7.288E-12"
+        ixz="3.6379E-06"
+        iyy="7.9969E-05"
+        iyz="-3.7962E-10"
+        izz="0.00011888" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pibot_description/meshes/apollo/laser_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3 0.3 0.3 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pibot_description/meshes/apollo/laser_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_link_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.7"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

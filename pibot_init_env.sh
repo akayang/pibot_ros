@@ -65,7 +65,7 @@ if [ ! ${LOCAL_IP} ]; then
     exit
 fi
 
-echo -e "\033[1;34mplease specify pibot model\033[1;32m(0:apollo,1:apolloX,2:zeus,3:hera,4:hades,5:hadesX,other for user defined):\033[1;33m"
+echo -e "\033[1;34mplease specify pibot model\033[1;32m(0:apollo,1:apolloX,2:zeus,3:hera,4:hades,5:hadesX,6:xbot,other for user defined):\033[1;33m"
 read -p "" PIBOT_MODEL_INPUT
 
 if [ "$PIBOT_MODEL_INPUT" = "0" ]; then
@@ -80,6 +80,8 @@ elif [ "$PIBOT_MODEL_INPUT" = "4" ]; then
     PIBOT_MODEL='hades'
 elif [ "$PIBOT_MODEL_INPUT" = "5" ]; then
     PIBOT_MODEL='hadesX'
+elif [ "$PIBOT_MODEL_INPUT" = "6" ]; then
+    PIBOT_MODEL='xbot'
 else
     PIBOT_MODEL=$PIBOT_MODEL_INPUT 
 fi
