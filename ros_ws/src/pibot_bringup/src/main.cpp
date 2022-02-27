@@ -1,6 +1,6 @@
 
-//#define SERIAL_DRIVER
-#define CANOPEN_DRIVER
+#define SERIAL_DRIVER
+//#define CANOPEN_DRIVER
 
 #include <ros/ros.h>
 #if defined SERIAL_DRIVER
