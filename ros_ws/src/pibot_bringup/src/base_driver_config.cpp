@@ -72,6 +72,10 @@ void BaseDriverConfig::dynamic_callback(pibot_bringup::pibot_driverConfig &confi
     config.max_v_liner_y = rp->max_v_liner_y;
     config.max_v_angular_z = rp->max_v_angular_z;
     config.imu_type = rp->imu_type;
+    config.motor_ratio=rp->motor_ratio;
+    config.model_type=rp->model_type;
+    config.motor_nonexchange_flag=rp->motor_nonexchange_flag;
+    config.encoder_nonexchange_flag=rp->encoder_nonexchange_flag;
     
     return;
   }
@@ -95,6 +99,10 @@ void BaseDriverConfig::dynamic_callback(pibot_bringup::pibot_driverConfig &confi
   rp->max_v_liner_y = config.max_v_liner_y;
   rp->max_v_angular_z = config.max_v_angular_z;
   rp->imu_type = config.imu_type;
+  rp->motor_ratio=config.motor_ratio;
+  rp->model_type=config.model_type;
+  rp->motor_nonexchange_flag=config.motor_nonexchange_flag;
+  rp->encoder_nonexchange_flag=config.encoder_nonexchange_flag;
 
   param_update_flag = true;
 }

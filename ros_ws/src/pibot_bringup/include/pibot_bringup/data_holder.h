@@ -32,6 +32,10 @@ struct Robot_parameter{
             unsigned short max_v_liner_y;
             unsigned short max_v_angular_z;
             unsigned char imu_type;
+            unsigned short motor_ratio;         // 电机减速比
+            unsigned char model_type;           // 运动模型类型 2wd-diff:1, 4wd-diff:2, 3wd-omni:101, 4wd-omni:102,4wd-mecanum:201
+            unsigned char motor_nonexchange_flag;      // 电机标志参数        1 正接      0 反接(相当于电机线交换)
+            unsigned char encoder_nonexchange_flag;    // 编码器标志参数  
         };
     };
 };
