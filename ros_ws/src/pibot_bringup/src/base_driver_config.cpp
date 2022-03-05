@@ -24,7 +24,7 @@ void BaseDriverConfig::init(Robot_parameter* r)
   rp = r;
 
   //comm param
-  pn.param<std::string>("port", port, "/dev/ttyACM0");
+  pn.param<std::string>("port", port, "/dev/ttyUSB0");
   pn.param<int32_t>("buadrate", buadrate, 115200);
   
   ROS_INFO("port:%s buadrate:%d", port.c_str(), buadrate);

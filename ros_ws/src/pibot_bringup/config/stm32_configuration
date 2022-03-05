@@ -1,0 +1,49 @@
+!!python/object/new:dynamic_reconfigure.encoding.Config
+dictitems:
+  cmd_last_time: 10
+  do_pid_interval: 0
+  encoder_nonexchange_flag: 15
+  encoder_resolution: 10000
+  groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+    dictitems:
+      cmd_last_time: 10
+      do_pid_interval: 0
+      encoder_nonexchange_flag: 15
+      encoder_resolution: 10000
+      groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      id: 0
+      imu_type: 0
+      kd: 0
+      ki: 0
+      ko: 0
+      kp: 0
+      max_v_angular_z: 0
+      max_v_liner_x: 0
+      max_v_liner_y: 0
+      model_type: 1
+      motor_nonexchange_flag: 15
+      motor_ratio: 40
+      name: Default
+      parameters: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      parent: 0
+      state: true
+      type: ''
+      wheel_diameter: 150
+      wheel_track: 440
+    state: []
+  imu_type: 0
+  kd: 0
+  ki: 0
+  ko: 0
+  kp: 0
+  max_v_angular_z: 0
+  max_v_liner_x: 0
+  max_v_liner_y: 0
+  model_type: 1
+  motor_nonexchange_flag: 15
+  motor_ratio: 40
+  wheel_diameter: 150
+  wheel_track: 440
+state: []

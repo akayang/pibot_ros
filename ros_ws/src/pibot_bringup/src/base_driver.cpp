@@ -39,11 +39,11 @@ BaseDriver::BaseDriver() : pn("~"), bdg(pn)
     
     init_cmd_odom();
 
-    init_pid_debug();
+//    init_pid_debug();
 
     read_param();
 
-    init_imu();
+    //init_imu();
 }
 
 BaseDriver::~BaseDriver()
@@ -126,9 +126,7 @@ void BaseDriver::read_param()
 
     frame->interact(ID_GET_ROBOT_PARAMTER);
 
-    ROS_INFO("RobotParameters: wheel_diameter=%d wheel_track=%d encoder_resolution=%d do_pid_interval=%d kp=%d ki=%d kd=%d ko=%d 
-        cmd_last_time=d max_v_liner_x=%d max_v_liner_y=%d max_v_angular_z=%d imu_type=%d motor_ratio=%d model_type=%d 
-        motor_nonexchange_flag=%d encoder_nonexchange_flag=%d", 
+    ROS_INFO("RobotParameters: wheel_diameter=%d wheel_track=%d encoder_resolution=%d do_pid_interval=%d kp=%d ki=%d kd=%d ko=%d cmd_last_time=%d max_v_liner_x=%d max_v_liner_y=%d max_v_angular_z=%d imu_type=%d motor_ratio=%d model_type=%d motor_nonexchange_flag=%d encoder_nonexchange_flag=%d", 
         param->wheel_diameter, param->wheel_track,  param->encoder_resolution, 
         param->do_pid_interval, param->kp, param->ki, param->kd, param->ko, 
         param->cmd_last_time, param->max_v_liner_x, param->max_v_liner_y, param->max_v_angular_z,
@@ -158,7 +156,7 @@ void BaseDriver::work_loop()
 
         update_odom();
 
-        update_pid_debug();
+//        update_pid_debug();
 
         update_speed();
 		
