@@ -1,0 +1,6 @@
+<launch>
+
+  <node pkg="cyrobot_monitor" type="cyrobot_monitor" name="cyrobot_monitor" output="screen">
+  </node>
+  
+</launch>
