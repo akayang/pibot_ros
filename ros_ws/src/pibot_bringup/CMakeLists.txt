@@ -206,7 +206,6 @@ add_executable(pibot_driver
   src/data_holder.cpp
   src/simple_dataframe_master.cpp
   src/serial_transport.cpp
-  src/CanOpen_driver.cpp
 )
 add_dependencies(pibot_driver ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(pibot_driver

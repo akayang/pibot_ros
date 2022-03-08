@@ -3,21 +3,13 @@
         <rosparam file="$(find pibot_bringup)/params/base_params_with_imu.yaml" command="load"/>
     </node>
 
-    <node pkg="pibot_imu" type="pibot_imu" name="pibot_imu" output="screen" respawn="false">
-        <rosparam>
-            imu/accelerometer_bias: {x: -0.163427, y: -0.106221, z: -0.911885}
-            imu/gyroscope_bias: {x: -0.039832, y: 0.035979, z: -0.000240}
-        </rosparam>
-        <param name="imu/perform_calibration" value="true" />
+    <node pkg="imu_publish" type="imu" name="imu_publisher" respawn="false">
+        <remap from="/imu/data" to="/imu_data"/>
     </node>
 
     <node pkg="tf" type="static_transform_publisher" name="base_imu_to_base_link"
         args="0 0.0 0 0 0.0  0.0 /base_link /imu_link 40" />  
 
-    <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_madgwick" output="screen" respawn="false" >
-        <param name="use_mag" value="false" />
-        <param name="publish_tf" value="false" />
-    </node>
 
     <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf" output="screen">
         <param name="output_frame" value="odom" />
@@ -29,7 +21,6 @@
         <param name="vo_used" value="false"/>
         <param name="debug" value="false"/>
         <remap from="odom" to="wheel_odom" />
-        <remap from="imu_data" to="imu/data" />
     </node>
 
     <node pkg="pibot_bringup" type="odom_ekf.py" name="odom_ekf" output="screen">

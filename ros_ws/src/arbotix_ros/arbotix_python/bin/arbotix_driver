@@ -56,7 +56,7 @@ class ArbotixROS(ArbotiX):
         pause = False
 
         # load configurations    
-        port = rospy.get_param("~port", "/dev/ttyUSB0")
+        port = rospy.get_param("~port", "/dev/pibot")
         baud = int(rospy.get_param("~baud", "115200"))
 
         self.rate = rospy.get_param("~rate", 100.0)

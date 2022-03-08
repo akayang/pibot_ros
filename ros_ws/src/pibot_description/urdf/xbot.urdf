@@ -23,7 +23,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="0 0 1.571" />
       <geometry>
         <mesh
           filename="package://pibot_description/meshes/xbot/base_link.STL" />
@@ -89,7 +89,7 @@
     type="fixed">
     <origin
       xyz="0 0 0.7"
-      rpy="0 0 0" />
+      rpy="0 0 3.1416" />
     <parent
       link="base_link" />
     <child
