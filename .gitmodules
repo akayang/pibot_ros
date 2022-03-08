@@ -1,0 +1,3 @@
+[submodule "ros_ws/src/Ros_Qt5_Gui_App"]
+	path = ros_ws/src/Ros_Qt5_Gui_App
+	url = git@github.com:akayang/Ros_Qt5_Gui_App.git
