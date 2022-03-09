@@ -149,10 +149,10 @@ int main(int argc, char **argv)
 					imuMsg.angular_velocity.y = saberDataHandle.gyroCal.gyroY;
 					imuMsg.angular_velocity.z = saberDataHandle.gyroCal.gyroZ;
 
-					imuMsg.orientation.x = saberDataHandle.quat.Q0.float_x;
-					imuMsg.orientation.y = saberDataHandle.quat.Q1.float_x;
-					imuMsg.orientation.z = saberDataHandle.quat.Q2.float_x;
-					imuMsg.orientation.w = saberDataHandle.quat.Q3.float_x;
+					imuMsg.orientation.w = saberDataHandle.quat.Q0.float_x;
+					imuMsg.orientation.x = saberDataHandle.quat.Q1.float_x;
+					imuMsg.orientation.y = saberDataHandle.quat.Q2.float_x;
+					imuMsg.orientation.z = saberDataHandle.quat.Q3.float_x;
 
 					imuMsg.header.stamp= ros::Time::now();
 					imuMsg.header.frame_id = "imu_link";
