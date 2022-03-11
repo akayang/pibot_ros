@@ -105,7 +105,7 @@ fi
 
 python ros_ws/src/pibot_bringup/scripts/set_baud.py $PIBOT_DRIVER_BAUD
 
-echo -e "\033[1;34mplease specify your pibot lidar\033[1;32m(0:rplidar(a1,a2),1:rplidar(a3),2:eai(x4),3:eai(g4),4:xtion,5:astra,6:kinectV1,7:kinectV2,8:rplidar(s1),other for user defined):\033[1;33m"
+echo -e "\033[1;34mplease specify your pibot lidar\033[1;32m(0:rplidar(a1,a2),1:rplidar(a3),2:eai(x4),3:eai(g4),4:xtion,5:astra,6:kinectV1,7:kinectV2,8:rplidar(s1),9:ltme,other for user defined):\033[1;33m"
 read -p "" PIBOT_LIDAR_INPUT
 
 if [ "$PIBOT_LIDAR_INPUT" = "0" ]; then
@@ -126,6 +126,8 @@ elif [ "$PIBOT_LIDAR_INPUT" = "7" ]; then
     PIBOT_LIDAR='kinectV2'
 elif [ "$PIBOT_LIDAR_INPUT" = "8" ]; then
     PIBOT_LIDAR='rplidar-s1'
+elif [ "$PIBOT_LIDAR_INPUT" = "9" ]; then
+    PIBOT_LIDAR='ltme'
 else
     PIBOT_LIDAR=$PIBOT_LIDAR_INPUT
 fi
