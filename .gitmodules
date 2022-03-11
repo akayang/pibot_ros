@@ -1,3 +1,6 @@
 [submodule "ros_ws/src/Ros_Qt5_Gui_App"]
 	path = ros_ws/src/Ros_Qt5_Gui_App
 	url = git@github.com:akayang/Ros_Qt5_Gui_App.git
+[submodule "ros_ws/src/ltme_node"]
+	path = ros_ws/src/ltme_node
+	url = git@github.com:akayang/ltme_node.git
